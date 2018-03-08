@@ -14,7 +14,7 @@ This Ansible role provides the ability to grant Conjur machine identity to a hos
 Install the Conjur role using the following command in your playbook directory:
 
 ```sh-session
-$ ansible-galaxy install cyberark.conjur
+$ ansible-galaxy install cyberark.conjur-host-identity
 ```
 
 ## Requirements
@@ -46,7 +46,7 @@ Configure a remote node with a Conjur identity and Summon:
 ```yml
 - hosts: servers
   roles:
-    - role: cyberark.conjur
+    - role: cyberark.conjur-host-identity
       conjur_appliance_url: 'https://conjur.myorg.com/api',
       conjur_account: 'myorg',
       conjur_host_factory_token: "{{lookup('env', 'HFTOKEN')}}",
