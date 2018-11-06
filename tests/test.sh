@@ -13,7 +13,6 @@ finish
 # normalises project name by filtering non alphanumeric characters and transforming to lowercase
 declare -x COMPOSE_PROJECT_NAME=$(echo ${BUILD_TAG:-"ansible-role-testing"} | sed -e 's/[^[:alnum:]]//g' | tr '[:upper:]' '[:lower:]')
 
-declare -x CUSTOM_CONJUR_AUTHN_API_KEY=''
 declare -x ANSIBLE_CONJUR_AUTHN_API_KEY=''
 declare -x CLI_CONJUR_AUTHN_API_KEY=''
 declare cli_cid=''
@@ -43,8 +42,6 @@ function setup_conjur {
   # set secret values
   docker exec ${cli_cid} bash -c '
     conjur variable values add ansible/target-password target_secret_password
-    conjur variable values add ansible/another-target-password another_target_secret_password
-    conjur variable values add ansible/master-password ansible_master_secret_password
   '
 }
 
@@ -114,7 +111,6 @@ function main() {
   cli_cid=$(docker-compose ps -q conjur_cli)
   setup_conjur
 
-  CUSTOM_CONJUR_AUTHN_API_KEY=$(api_key_for 'cucumber:host:ansible/ansible-custom-target')
   ANSIBLE_CONJUR_AUTHN_API_KEY=$(api_key_for 'cucumber:host:ansible/ansible-master')
   docker-compose up -d ansible
   ansible_cid=$(docker-compose ps -q ansible)
