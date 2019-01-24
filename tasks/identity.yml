@@ -6,7 +6,7 @@
 
 - block:
   - name: Install "ca-certificates"
-    apt:
+    package:
       name: ca-certificates
 
   - name: Place Conjur public SSL certificate
