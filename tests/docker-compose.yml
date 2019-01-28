@@ -44,8 +44,13 @@ services:
     links:
       - conjur
 
-  test_app:
-    build: ./test_app
+  test_app_ubuntu:
+    build: ./test_app_ubuntu
+    entrypoint: sleep
+    command: infinity
+
+  test_app_centos:
+    build: ./test_app_centos
     entrypoint: sleep
     command: infinity
 
