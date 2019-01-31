@@ -21,6 +21,12 @@
       dest: /etc/ssl/certs/conjur.crt
       state: link
     register: cert_symlink
+    
+  - name: Install openssl-perl Package
+    yum:
+      name: openssl-perl
+    when:
+      ansible_os_family == 'RedHat'
 
   - name: Rehash certs
     command: 'c_rehash'
