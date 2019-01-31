@@ -31,7 +31,7 @@ function api_key_for {
 }
 
 function hf_token {
-  echo $(docker exec ${cli_cid} conjur hostfactory tokens create --duration-minutes=5 ansible/ansible-factory | jq -r '.[0].token')
+  echo $(docker exec ${cli_cid} conjur hostfactory tokens create --duration-days=5 ansible/ansible-factory | jq -r '.[0].token')
 }
 
 function setup_conjur {
@@ -72,7 +72,8 @@ function run_test_case {
 }
 
 function teardown_and_setup {
-  docker-compose up -d --force-recreate --scale test_app=2 test_app
+  docker-compose up -d --force-recreate --scale test_app_ubuntu=2 test_app_ubuntu
+  docker-compose up -d --force-recreate --scale test_app_centos=2 test_app_centos
 }
 
 function wait_for_server {
