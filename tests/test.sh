@@ -4,7 +4,7 @@ set -x
 function finish {
   echo 'Removing test environment'
   echo '---'
-  #docker-compose down -v
+  docker-compose down -v
   rm -rf inventory.tmp
 }
 trap finish EXIT
