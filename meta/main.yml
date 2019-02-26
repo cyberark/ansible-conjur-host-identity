@@ -19,6 +19,12 @@ galaxy_info:
       versions:
         - trusty
         - xenial
+    - name: CentOS
+      versions:
+        - 7.X
+    - name: RHEL
+      versions:
+        - 7.X
 
   galaxy_tags:
     - machine-identity
