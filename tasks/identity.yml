@@ -8,8 +8,6 @@
   - name: Install "ca-certificates"
     package:
       name: ca-certificates
-    register: ca-cert_install
-    until: ca-cert_install|succeeded
     retries: 10
     delay: 2
 
@@ -31,8 +29,6 @@
       name: openssl-perl
     when:
       ansible_os_family == 'RedHat'
-    register: openssl_install
-    until: openssl_install|succeeded
     retries: 10
     delay: 2
 
