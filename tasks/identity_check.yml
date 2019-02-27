@@ -6,10 +6,10 @@
 
 - name: Set fact "conjurized"
   set_fact:
-    conjurized: "{{identity_file.stat.exists|bool}}"
+    conjurized: "{{ identity_file.stat.exists|bool }}"
 
 - name: Ensure all required variables are set
-  fail: msg="Variable '{{item}}' is not set!"
+  fail: msg="Variable '{{ item }}' is not set!"
   when: item is undefined
   with_items:
     - "{{ conjur_account }}"
@@ -18,11 +18,11 @@
 
 - name: Set fact "ssl_configuration"
   set_fact:
-    ssl_configuration: "{{'https' in conjur_appliance_url}}"
+    ssl_configuration: "{{ 'https' in conjur_appliance_url }}"
 
 - block:
   - name: Ensure all required ssl variables are set
-    fail: msg="Variable '{{item}}' is not set!"
+    fail: msg="Variable '{{ item }}' is not set!"
     when: item is undefined
     with_items:
       - "{{ conjur_ssl_certificate }}"
@@ -42,7 +42,7 @@
 
 - block:
   - name: Ensure "conjur_host_factory_token" is set (if node is not already conjurized)
-    fail: msg="Variable '{{item}}' is not set!"
+    fail: msg="Variable '{{ item }}' is not set!"
     when: item is undefined
     with_items:
       - "{{ conjur_host_factory_token }}"
