@@ -9,7 +9,7 @@
     package:
       name: ca-certificates
     register: ca-cert_install
-    until: ca-cert_install is success
+    until: ca-cert_install|succeeded
     retries: 10
     delay: 2
 
@@ -32,7 +32,7 @@
     when:
       ansible_os_family == 'RedHat'
     register: openssl_install
-    until: openssl_install is success
+    until: openssl_install|succeeded
     retries: 10
     delay: 2
 
