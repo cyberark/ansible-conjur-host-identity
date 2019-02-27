@@ -8,7 +8,7 @@
   - name: Install "ca-certificates"
     package:
       name: ca-certificates
-      retries: 3
+    retries: 3
 
   - name: Place Conjur public SSL certificate
     copy:
@@ -26,7 +26,7 @@
   - name: Install openssl-perl Package
     yum:
       name: openssl-perl
-      retries: 3
+    retries: 3
     when:
       ansible_os_family == 'RedHat'
 
