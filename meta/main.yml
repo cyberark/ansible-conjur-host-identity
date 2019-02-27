@@ -19,15 +19,12 @@ galaxy_info:
       versions:
         - trusty
         - xenial
-    - name: CentOS
+    - name: EL
       versions:
-        - 7.X
-    - name: RHEL
-      versions:
-        - 7.X
+        - 7
 
   galaxy_tags:
-    - machine-identity
+    - identity
     - cyberark
     - conjur
     - security
