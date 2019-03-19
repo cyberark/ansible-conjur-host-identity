@@ -8,6 +8,10 @@ pipeline {
     buildDiscarder(logRotator(daysToKeepStr: '14'))
   }
 
+  triggers {
+    cron(getDailyCronString())
+  }
+
   stages {
     stage('Run tests') {
       steps {
