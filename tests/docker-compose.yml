@@ -31,9 +31,9 @@ services:
       - pg
 
   conjur_cli:
-    image: conjurinc/cli5
+    image: cyberark/conjur-cli:5-latest
     entrypoint: []
-    command: /sbin/init
+    command: sleep infinity
     environment:
       CONJUR_APPLIANCE_URL: http://conjur:3000
       CONJUR_ACCOUNT: cucumber
