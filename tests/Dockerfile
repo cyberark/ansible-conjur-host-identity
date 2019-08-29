@@ -1,6 +1,6 @@
 FROM ansible/ansible:ubuntu1604
 
-RUN pip install testinfra ansible && mkdir -p /conjurinc/
+RUN pip install testinfra ansible pytest==2.9.2 && mkdir -p /conjurinc/
 
 RUN apt-get update && apt-get install -y \
     apt-transport-https \
