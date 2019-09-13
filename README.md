@@ -94,4 +94,4 @@ None
 
 ## License
 
-Apache 2
+This repository is licensed under Apache License 2.0 - see [`LICENSE`](LICENSE) for more details.
