@@ -63,7 +63,7 @@ function run_test_case {
     "
     docker exec ${ansible_cid} bash -c "
       cd tests
-      py.test --junitxml=./junit/${test_case} --connection docker -v test_cases/${test_case}/tests/test_default.py
+      py.test --junitxml=./junit/${test_case} -v test_cases/${test_case}/tests/test_default.py
     "
   else
     echo ERROR: run_test called with no argument 1>&2
@@ -94,7 +94,7 @@ function generate_inventory {
   # uses .j2 template to generate inventory prepended with COMPOSE_PROJECT_NAME
   docker exec $(docker-compose ps -q ansible) bash -c '
     cd tests
-    ansible-playbook -i -, inventory-playbook.yml
+    ansible-playbook inventory-playbook.yml
   '
 }
 
