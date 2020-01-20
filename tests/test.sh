@@ -94,7 +94,7 @@ function generate_inventory {
   # uses .j2 template to generate inventory prepended with COMPOSE_PROJECT_NAME
   docker exec $(docker-compose ps -q ansible) bash -c '
     cd tests
-    ansible-playbook -i -, inventory-playbook.yml
+    ansible-playbook inventory-playbook.yml
   '
 }
 
