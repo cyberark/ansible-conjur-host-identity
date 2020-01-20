@@ -87,12 +87,12 @@ function wait_for_server {
 }
 
 function fetch_ssl_cert {
-  docker exec $(docker-compose ps -q conjur-proxy-nginx) cat cert.crt > conjur.pem
+  (docker-compose exec -T conjur-proxy-nginx cat cert.crt) > conjur.pem
 }
 
 function generate_inventory {
   # uses .j2 template to generate inventory prepended with COMPOSE_PROJECT_NAME
-  docker exec $(docker-compose ps -q ansible) bash -c '
+  docker-compose exec -T ansible bash -c '
     cd tests
     ansible-playbook inventory-playbook.yml
   '

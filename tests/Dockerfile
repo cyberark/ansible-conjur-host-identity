@@ -1,12 +1,14 @@
-FROM ansible/ansible:ubuntu1604
-
-RUN pip install testinfra ansible pytest==2.9.2 && mkdir -p /conjurinc/
+FROM ubuntu:18.04
 
 RUN apt-get update && apt-get install -y \
     apt-transport-https \
     ca-certificates \
     curl \
-    software-properties-common
+    software-properties-common \
+    python-pip
+
+RUN pip install -U pip
+RUN pip install pytest==2.9.2 testinfra ansible && mkdir -p /conjurinc/
 
 RUN curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
 RUN add-apt-repository \
@@ -19,3 +21,5 @@ RUN apt-add-repository -y ppa:brightbox/ruby-ng && apt-get update && apt-get ins
 RUN gem install conjur-cli
 
 WORKDIR /conjurinc/
+
+CMD ["/bin/sleep", "1d"]
