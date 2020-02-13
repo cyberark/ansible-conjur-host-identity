@@ -13,6 +13,10 @@ pipeline {
   }
 
   stages {
+    stage('Validate Changelog') {
+      steps { sh './tests/parse-changelog.sh' }
+    }
+
     stage('Run tests') {
       steps {
         sh 'cd tests; ./test.sh'
@@ -20,6 +24,7 @@ pipeline {
         junit 'tests/junit/*'
       }
     }
+
   }
 
   post {
