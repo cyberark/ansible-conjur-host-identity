@@ -14,3 +14,12 @@ For general contribution and community guidelines, please see the [community rep
 From here your pull request will be reviewed and once you've responded to all
 feedback it will be merged into the project. Congratulations, you're a
 contributor!
+
+### Testing
+
+To run the tests:
+
+```sh-session
+$ cd tests
+$ ./test.sh
+```
