@@ -74,15 +74,6 @@ When connecting to Conjur 4 (Conjur Enterprise), Summon requires the environment
 
 The above example uses Summon to retrieve the password stored in `staging/myapp/database/password`, set it to an environment variable `DB_PASSWORD`, and provide it to the demo application process. Using Summon, the secret is kept off disk. If the service is restarted, Summon retrieves the password as the application is started.
 
-### Testing
-
-To run the tests:
-
-```sh-session
-$ cd tests
-$ ./test.sh
-```
-
 ### Dependencies
 
 None
@@ -91,6 +82,13 @@ None
 
 * Add `no_log: true` to each play that uses sensitive data, otherwise that data can be printed to the logs.
 * Set the Ansible files to minimum permissions. Ansible uses the permissions of the user that runs it.
+
+## Contributing
+
+We welcome contributions of all kinds to this repository. For instructions on how to get started and descriptions of our development workflows, please see our [contributing
+guide][contrib].
+
+[contrib]: https://github.com/cyberark/ansible-conjur-host-identity/blob/master/CONTRIBUTING.md
 
 ## License
 
