@@ -55,6 +55,9 @@
       status_code: 201
       validate_certs: "{{ conjur_validate_certs }}"
     register: host_factory_response
+    retries: 3
+    delay: 10
+    until: host_factory_response.status == 201
 
   - name: Place identity file /etc/conjur.identity
     template:
