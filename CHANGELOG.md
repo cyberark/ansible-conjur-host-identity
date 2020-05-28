@@ -11,6 +11,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Changed
 - Updated reference to Conjur CLI container
 - Updated base image to Ubuntu 18.04
+- [Added retries](https://github.com/cyberark/ansible-conjur-host-identity/pull/32) to tasks/identity/Request identity from Conjur.
+  This will increase the reliability of host factory requests without introducing any extra delay if the first request succeeds.
 
 ## [0.3.1] - 2019-02-27
 ### Fixed
