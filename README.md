@@ -9,6 +9,17 @@ This Ansible role provides the ability to grant Conjur machine identity to a hos
 * To learn more about Summon, the tool that lets you execute applications with secrets retrieved from Conjur, visit the [Summon Webpage](https://cyberark.github.io/summon/)
 * To learn more about other ways you can integrate with Conjur, visit our pages on the [CLI](https://developer.conjur.net/cli), [API](https://developer.conjur.net/clients), and [Integrations](https://www.conjur.org/integrations/)
 
+## Using ansible-conjur-host-identity with Conjur OSS 
+
+Are you using this project with [Conjur OSS](https://github.com/cyberark/conjur)? Then we 
+**strongly** recommend choosing the version of this project to use from the latest [Conjur OSS 
+suite release](https://docs.conjur.org/Latest/en/Content/Overview/Conjur-OSS-Suite-Overview.html). 
+Conjur maintainers perform additional testing on the suite release versions to ensure 
+compatibility. When possible, upgrade your Conjur version to match the 
+[latest suite release](https://docs.conjur.org/Latest/en/Content/ReleaseNotes/ConjurOSS-suite-RN.htm); 
+when using integrations, choose the latest suite release that matches your Conjur version. For any 
+questions, please contact us on [Discourse](https://discuss.cyberarkcommons.org/c/conjur/5).
+
 ## Installation
 
 Install the Conjur role using the following command in your playbook directory:
