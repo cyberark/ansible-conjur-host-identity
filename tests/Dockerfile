@@ -5,10 +5,9 @@ RUN apt-get update && apt-get install -y \
     ca-certificates \
     curl \
     software-properties-common \
-    python-pip
+    python3-pip
 
-RUN pip install -U pip
-RUN pip install pytest==2.9.2 testinfra ansible && mkdir -p /conjurinc/
+RUN pip3 install pytest testinfra ansible && mkdir -p /conjurinc/
 
 RUN curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
 RUN add-apt-repository \
