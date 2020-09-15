@@ -1,3 +1,7 @@
+# Deprecation Notice ⚠️
+This role has been migrated to the [Ansible Conjur Collection](https://github.com/cyberark/ansible-conjur-collection/), 
+and this repository has been deprecated.
+
 # Conjur Ansible Role
 
 This Ansible role provides the ability to grant Conjur machine identity to a host. Based on that identity, secrets can then be retrieved securely using the [Summon](https://github.com/cyberark/summon) tool (installed on hosts with identities created by this role).

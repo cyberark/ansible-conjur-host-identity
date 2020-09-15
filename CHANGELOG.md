@@ -4,7 +4,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [1.0.0] - 2020-09-15
+
+### Deprecated
+- This repository is deprecated, with all relevant files and tests migrated to the [Ansible Conjur 
+  Collection](https://github.com/cyberark/ansible-conjur-collection/).
+  [cyberark/conjur-host-identity#30](https://github.com/cyberark/ansible-conjur-host-identity/issues/30)
+
 ### Added
 - Added daily build trigger
 
@@ -32,7 +38,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Establishes Conjur identity using a Conjur Host Factory Token
 - Installs and configures Summon Summon-Conjur provider for secure secret retrieval
 
-[Unreleased]: https://github.com/cyberark/ansible-conjur-host-identity/compare/v0.3.1...HEAD
+[Unreleased]: https://github.com/cyberark/ansible-conjur-host-identity/compare/v1.0.0....HEAD
+[1.0.0]: https://github.com/cyberark/ansible-conjur-host-identity/compare/v0.3.1...v1.0.0
 [0.3.1]: https://github.com/cyberark/ansible-conjur-host-identity/compare/v0.3.0...v0.3.1
 [0.3.0]: https://github.com/cyberark/ansible-conjur-host-identity/compare/v0.2.0...v0.3.0
 [0.2.0]: https://github.com/cyberark/ansible-conjur-host-identity/compare/v0.1.0...v0.2.0
