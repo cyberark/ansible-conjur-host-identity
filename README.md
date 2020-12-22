@@ -18,6 +18,7 @@ using the [Summon](https://github.com/cyberark/summon) tool.
 ## Requirements
 
 * Conjur v1+ or Dynamic Access Provider (DAP) v10+
+* Conjur Enterprise v4
 * Ansible v2.8
 
 If you are using Ansible v2.9+, please consider using our
