@@ -15,7 +15,7 @@ From here your pull request will be reviewed and once you've responded to all
 feedback it will be merged into the project. Congratulations, you're a
 contributor!
 
-### Testing
+## Testing
 
 To run the tests:
 
@@ -23,3 +23,14 @@ To run the tests:
 $ cd tests
 $ ./test.sh
 ```
+
+## Releasing
+
+To create a new release, follow the instructions in our general release
+guidelines [here](https://github.com/cyberark/community/blob/master/Conjur/CONTRIBUTING.md#release-process).
+
+The project version is stored in the [VERSION](./VERSION) file. The metadata file
+[meta/main.yml](meta/main.yml) may also need to be updated with each release.
+
+When a new tag is added to this project, the new version is automatically
+available in Ansible Galaxy.

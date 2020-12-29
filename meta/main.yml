@@ -4,15 +4,10 @@ galaxy_info:
   short_description: Grants Conjur machine identity
   description: Grants Conjur machine identity to hosts
   company: CyberArk
-  license: Apache
-  author:
-    - Dustin Collins (@dustinmm80)
-    - Oren Ben Meir (@orenbm)
-    - Jason Vanderhoof (@jvanderhoof)
-    - Kumbirai Tanekha (@doodlesbykumbi)
-    - Gary Moon (@garymoon)
+  license: Apache-2.0
+  author: Conjur Maintainers (conj_maintainers@cyberark.com)
 
-  min_ansible_version: '2.3'
+  min_ansible_version: '2.8'
 
   platforms:
     - name: Ubuntu
