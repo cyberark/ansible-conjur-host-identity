@@ -22,7 +22,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
   recommend that users leverage the [Conjur Ansible collection](https://github.com/cyberark/ansible-conjur-collection)
   instead of this project.
   [cyberark/ansible-conjur-host-identity#45](https://github.com/cyberark/ansible-conjur-host-identity/issues/45)
-  
+
 ### Deprecated
 - Support for Conjur Enterprise v4 is deprecated in this release. It will be removed
   in the next release.
