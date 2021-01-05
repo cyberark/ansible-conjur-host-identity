@@ -16,12 +16,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
   to tasks/identity/Request identity from Conjur. This will increase the reliability
   of host factory requests without introducing any extra delay if the first request succeeds.
 
-### Deprecated
+### Removed
 - Support for Ansible versions lower than 2.8 is removed in this release since
   these versions are already well past end of life. For Ansible 2.9+, we now
   recommend that users leverage the [Conjur Ansible collection](https://github.com/cyberark/ansible-conjur-collection)
   instead of this project.
   [cyberark/ansible-conjur-host-identity#45](https://github.com/cyberark/ansible-conjur-host-identity/issues/45)
+  
+### Deprecated
 - Support for Conjur Enterprise v4 is deprecated in this release. It will be removed
   in the next release.
   [cyberark/ansible-conjur-host-identity#45](https://github.com/cyberark/ansible-conjur-host-identity/issues/45)
