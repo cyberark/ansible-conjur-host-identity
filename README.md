@@ -17,16 +17,16 @@ using the [Summon](https://github.com/cyberark/summon) tool.
 
 ## Requirements
 
-* Conjur v1+ or Dynamic Access Provider (DAP) v10+
+* Conjur v1+ or Conjur Enterprise (formerly DAP) v10+
 * Conjur Enterprise v4
 * Ansible v2.8
 
 If you are using Ansible v2.9+, please consider using our
 [Ansible Collection](https://github.com/cyberark/ansible-conjur-collection) instead.
 
-## Using ansible-conjur-host-identity with Conjur OSS
+## Using ansible-conjur-host-identity with Conjur Open Source
 
-Are you using this project with [Conjur OSS](https://github.com/cyberark/conjur)? Then we
+Are you using this project with [Conjur Open Source](https://github.com/cyberark/conjur)? Then we
 **strongly** recommend choosing the version of this project to use from the latest [Conjur OSS
 suite release](https://docs.conjur.org/Latest/en/Content/Overview/Conjur-OSS-Suite-Overview.html).
 Conjur maintainers perform additional testing on the suite release versions to ensure
@@ -49,15 +49,15 @@ to retrieve the secrets it needs in a secure manner.
 
 ### Role Variables
 
-* `conjur_appliance_url` `*`: The URL of the Conjur / DAP instance you are connecting
-   to. When connecting to an HA DAP master cluster, this would be the URL of the
+* `conjur_appliance_url` `*`: The URL of the Conjur / Conjur Enterprise instance you are connecting
+   to. When connecting to an HA Conjur Enterprise master cluster, this would be the URL of the
    master load balancer.
 * `conjur_account` `*`: The account name for the Conjur instance you are connecting to.
 * `conjur_host_factory_token` `*`: [Host Factory](https://docs.conjur.org/Latest/en/Content/Operations/Services/host_factory.html)
   token for layer enrollment. This should be specified in the environment on the
   Ansible controlling host.
 * `conjur_host_name` `*`: Name of the host identity for the host factory to create.
-* `conjur_ssl_certificate`: The PEM-encoded x509 CA certificate chain for the DAP
+* `conjur_ssl_certificate`: The PEM-encoded x509 CA certificate chain for the Conjur Enterprise
   instance you are connecting to. This value may be obtained by running the command:
   ```
   $ openssl s_client -showcerts -servername [CONJUR_DNS_NAME] -connect [CONJUR_DNS_NAME]:443 < /dev/null 2> /dev/null
