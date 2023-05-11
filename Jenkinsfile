@@ -14,7 +14,7 @@ pipeline {
 
   stages {
     stage('Validate Changelog') {
-      steps { sh './bin/parse-changelog.sh' }
+      steps { parseChangelog() }
     }
 
     stage('Run tests') {

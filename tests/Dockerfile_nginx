@@ -1,7 +1,8 @@
-FROM nginx:1.13.3
+FROM nginx:1.24.0
 
-RUN export DEBIAN_FRONTEND=noninteractive && \
-    apt-get update && \
+ENV DEBIAN_FRONTEND=noninteractive
+
+RUN apt-get update && \
     apt-get install -y iputils-ping procps openssl && \
     rm -rf /var/lib/apt/lists/*
 
