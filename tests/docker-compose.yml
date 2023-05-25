@@ -40,8 +40,6 @@ services:
       CONJUR_AUTHN_API_KEY: ${CLI_CONJUR_AUTHN_API_KEY}
     volumes:
       - ./policy:/policy
-    links:
-      - conjur
 
   test_app_ubuntu:
     build: ./test_app_ubuntu
