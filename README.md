@@ -1,3 +1,9 @@
+# DEPRECATED
+
+This standalone Conjur host identity role is deprecated and no longer maintained.
+Please use the version of this role from the [Ansible Conjur Collection](https://github.com/cyberark/ansible-conjur-collection?tab=readme-ov-file#conjur-ansible-role)
+instead.
+
 # Conjur Ansible Role
 
 This Ansible role provides the ability to grant Conjur machine identity to a host.
