@@ -1,5 +1,5 @@
 ---
-- include: identity_check.yml  # registers variable 'conjurized'
-- include: identity.yml
-- include: summon.yml
-- include: summon-conjur.yml
+- ansible.builtin.include_tasks: identity_check.yml  # registers variable 'conjurized'
+- ansible.builtin.include_tasks: identity.yml
+- ansible.builtin.include_tasks: summon.yml
+- ansible.builtin.include_tasks: summon-conjur.yml
